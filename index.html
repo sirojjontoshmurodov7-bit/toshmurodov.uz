@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sirojjon Toshmurodov — Fullstack web developer va Software engineer</title>
+    <meta name="description" content="Sirojjon Toshmurodov — fullstack web developer va software engineer. Moliyachi, JS-talim va Management loyihalari asoschisi. Freelance loyihalar uchun bog‘laning." />
+    <meta name="author" content="Sirojjon Toshmurodov" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0b0b10" />
+    <link rel="canonical" href="https://toshmurodov.uz/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="uz_UZ" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="Sirojjon Toshmurodov" />
+    <meta property="og:url" content="https://toshmurodov.uz/" />
+    <meta property="og:title" content="Sirojjon Toshmurodov — Fullstack web developer va Software engineer" />
+    <meta property="og:description" content="Veb-platformalarni boshidan oxirigacha quraman: React, TypeScript, Node.js, NestJS, PostgreSQL. Freelance loyihalarga ochiqman." />
+    <meta property="og:image" content="https://toshmurodov.uz/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="profile:first_name" content="Sirojjon" />
+    <meta property="profile:last_name" content="Toshmurodov" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script>
+      // Skript ishlayotganini eng boshida belgilaymiz: kirish sahnasi shu belgiga tayanadi.
+      (function () {
+        var d = document.documentElement, intro = true;
+        d.classList.add('js');
+        try {
+          if (sessionStorage.getItem('intro') === '1') intro = false;
+          var l = localStorage.getItem('lang');
+          if (l === 'ru' || l === 'en') d.setAttribute('data-lang-pending', l);
+        } catch (e) {}
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) intro = false;
+        // Bo'limga to'g'ridan-to'g'ri havola bilan kirilsa, kirish sahnasi yo'lni to'smaydi.
+        if (location.hash.length > 1 && location.hash !== '#top') intro = false;
+        if (intro) {
+          d.classList.add('intro', 'intro-lock');
+          // Asosiy skript yuklanmay qolsa, sahifa qulflanib qolmasin.
+          setTimeout(function () { if (!window.__booted) d.classList.remove('intro', 'intro-lock'); }, 5000);
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Onest:wght@400;500;600&family=Unbounded:wght@600&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://toshmurodov.uz/#sirojjon",
+            "name": "Sirojjon Toshmurodov",
+            "givenName": "Sirojjon",
+            "familyName": "Toshmurodov",
+            "alternateName": ["Toshmurodov Sirojjon", "Сирожжон Тошмуродов"],
+            "url": "https://toshmurodov.uz/",
+            "jobTitle": "Fullstack web developer, Software engineer",
+            "description": "Fullstack web developer va software engineer. Moliyachi, JS-talim va Management loyihalari asoschisi.",
+            "email": "mailto:sirojjontoshmurodov7@gmail.com",
+            "telephone": "+998902881292",
+            "nationality": "UZ",
+            "knowsLanguage": ["uz", "en", "ru"],
+            "knowsAbout": ["HTML", "CSS", "Tailwind CSS", "JavaScript", "TypeScript", "React", "Node.js", "Express.js", "NestJS", "Python", "C++", "PHP", "PostgreSQL", "MongoDB"],
+            "alumniOf": [
+              { "@type": "CollegeOrUniversity", "name": "Toshkent axborot texnologiyalari universiteti (TATU)" },
+              { "@type": "EducationalOrganization", "name": "Najot Ta’lim" },
+              { "@type": "EducationalOrganization", "name": "Qorako‘l akademik litseyi" }
+            ],
+            "sameAs": [
+              "https://github.com/sirojjontoshmurodov7-bit",
+              "https://www.linkedin.com/in/sirojjon-toshmurodov-4798a840a/",
+              "https://t.me/ToshmurodovSirojjon"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://toshmurodov.uz/#website",
+            "url": "https://toshmurodov.uz/",
+            "name": "Sirojjon Toshmurodov",
+            "inLanguage": ["uz", "ru", "en"],
+            "author": { "@id": "https://toshmurodov.uz/#sirojjon" }
+          },
+          {
+            "@type": "WebApplication",
+            "name": "Moliyachi",
+            "url": "https://moliyachi-edu.uz/",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "description": "Ta’lim markazlari va mustaqil ustozlar uchun moliyaviy hisob-kitoblarni avtomatlashtiruvchi veb-platforma.",
+            "creator": { "@id": "https://toshmurodov.uz/#sirojjon" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#men" data-i18n="skipLink">Asosiy matnga o‘tish</a>
+
+    <header class="rail" id="rail">
+      <div class="container rail__inner">
+        <a class="rail__mark" href="#top" aria-label="Sirojjon Toshmurodov">Sirojjon T.</a>
+        <nav class="rail__nav" id="nav" aria-label="Sahifa bo‘limlari" data-i18n-attr="aria-label:navLabel">
+          <a href="#men" data-i18n="navAbout">Men haqimda</a>
+          <a href="#konikmalar" data-i18n="navSkills">Ko‘nikmalar</a>
+          <a href="#loyihalar" data-i18n="navProjects">Loyihalar</a>
+          <a href="#talim" data-i18n="navEdu">Ta’lim</a>
+          <a href="#aloqa" data-i18n="navContact">Aloqa</a>
+        </nav>
+        <div class="rail__tools">
+          <div class="lang" role="group" aria-label="Til" data-i18n-attr="aria-label:langLabel">
+            <button type="button" data-lang="uz" aria-pressed="true">O‘z</button>
+            <button type="button" data-lang="ru" aria-pressed="false">Рус</button>
+            <button type="button" data-lang="en" aria-pressed="false">Eng</button>
+          </div>
+          <button class="rail__menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menyu" data-i18n-attr="aria-label:menuLabel">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. Sahna: parda, xakker va terilayotgan matn -->
+      <section class="hero on-curtain" id="top">
+        <div class="curtain" id="curtain" aria-hidden="true">
+          <div class="curtain__field">
+            <i class="blob blob--hot"></i>
+            <i class="blob blob--cyan"></i>
+            <i class="blob blob--lime"></i>
+            <i class="blob blob--orange"></i>
+          </div>
+          <div class="curtain__pleats"></div>
+          <div class="curtain__hem"></div>
+        </div>
+
+        <svg class="stage" id="stage" aria-hidden="true" focusable="false"></svg>
+
+        <div class="container hero__inner">
+          <p class="hero__prompt" data-type data-i18n="heroPrompt">sirojjon@toshmurodov.uz:~$ whoami</p>
+          <h1 data-type>Sirojjon Toshmurodov</h1>
+          <p class="lead" data-type data-i18n="heroLead">Fullstack web developer va software engineer. Freelance loyihalarga ochiqman.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="https://t.me/ToshmurodovSirojjon" target="_blank" rel="noopener">
+              <span data-i18n="heroCta">Telegramda yozish</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </a>
+            <a class="btn btn--secondary" href="#loyihalar" data-i18n="heroCta2">Loyihalarni ko‘rish</a>
+          </div>
+        </div>
+
+        <button class="skip" id="skip" type="button" hidden data-i18n="skipIntro">O‘tkazib yuborish</button>
+      </section>
+
+      <!-- 2. Men haqimda -->
+      <section class="section about" id="men" style="--signal: var(--color-sun)">
+        <div class="container about__grid">
+          <div class="about__lead" data-reveal>
+            <h2 data-i18n="aboutTitle">G‘oyani ishlaydigan mahsulotga aylantiraman</h2>
+            <p class="lead" data-i18n="aboutText">Men Sirojjonman. Veb-platformalarni boshidan oxirigacha o‘zim quraman: talablarni tahlil qilishdan tortib ma’lumotlar bazasi, backend va interfeysgacha. Hozir o‘z loyihalarim ustida ishlayapman va freelance buyurtmalar olaman.</p>
+          </div>
+
+          <dl class="facts" data-reveal>
+            <div class="facts__row">
+              <dt data-i18n="factNowK">Hozir</dt>
+              <dd data-i18n="factNowV">Najot Ta’limda Full-Stack dasturlashni o‘qiyapman</dd>
+            </div>
+            <div class="facts__row">
+              <dt data-i18n="factUniK">Universitet</dt>
+              <dd data-i18n="factUniV">TATU, Dasturiy injiniring, 4-kurs</dd>
+            </div>
+            <div class="facts__row">
+              <dt data-i18n="factWorkK">Ish turi</dt>
+              <dd data-i18n="factWorkV">Freelance</dd>
+            </div>
+            <div class="facts__row">
+              <dt data-i18n="factHobbyK">Qiziqishlarim</dt>
+              <dd class="hobbies">
+                <span class="hobby hobby--chess">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h9v-2l-1.5-1.5c.3-3.2 2.5-4.5 2.5-8C18 6 15.5 3.5 12 3l-1 1.5L8 5 5 9.5l1.5 2 3-1c0 2-2.5 3.5-2.5 6.5L6.5 19 8 21Z" /></svg>
+                  <span data-i18n="hobbyChess">Shaxmat</span>
+                </span>
+                <span class="hobby hobby--ball">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="m12 8.2 3.6 2.6-1.4 4.2H9.8l-1.4-4.2L12 8.2ZM12 3v5.2M20.6 9.5l-5 1.3M17.3 19.3 14.2 15M6.7 19.3 9.8 15M3.4 9.5l5 1.3" /></svg>
+                  <span data-i18n="hobbyBall">Futbol</span>
+                </span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="container">
+          <ol class="does">
+            <li data-reveal style="--i: 0">
+              <h3 data-i18n="does1T">Frontend</h3>
+              <p data-i18n="does1D">React va TypeScript’da tez, har ekranga mos interfeyslar.</p>
+            </li>
+            <li data-reveal style="--i: 1">
+              <h3 data-i18n="does2T">Backend</h3>
+              <p data-i18n="does2D">Node.js, Express va NestJS’da API hamda biznes mantiqi.</p>
+            </li>
+            <li data-reveal style="--i: 2">
+              <h3 data-i18n="does3T">Ma’lumotlar bazasi</h3>
+              <p data-i18n="does3D">PostgreSQL va MongoDB tuzilmasini loyihalash.</p>
+            </li>
+            <li data-reveal style="--i: 3">
+              <h3 data-i18n="does4T">Integratsiya</h3>
+              <p data-i18n="does4D">Telegram bot va webhook orqali avtomatlashtirish.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 3. Ko‘nikmalar -->
+      <section class="section skills" id="konikmalar" style="--signal: var(--color-lime)">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <h2 data-i18n="skillsTitle">Nimani qanchalik bilaman</h2>
+            <p class="section__note" data-i18n="skillsNote">Foizlar — o‘zimga bergan bahoyim.</p>
+          </div>
+
+          <div class="skills__grid">
+            <div class="skillset" data-reveal style="--signal: var(--color-lime); --i: 0">
+              <h3 data-i18n="setFront">Frontend</h3>
+              <ul>
+                <li class="skill" style="--v: 1"><span class="skill__name">HTML</span><span class="skill__num num" data-count="100">100%</span><span class="skill__bar"><i></i></span></li>
+                <li class="skill" style="--v: 1"><span class="skill__name">CSS (Tailwind)</span><span class="skill__num num" data-count="100">100%</span><span class="skill__bar"><i></i></span></li>
+                <li class="skill" style="--v: 1"><span class="skill__name">JavaScript</span><span class="skill__num num" data-count="100">100%</span><span class="skill__bar"><i></i></span></li>
+                <li class="skill" style="--v: 0.8"><span class="skill__name">TypeScript</span><span class="skill__num num" data-count="80">80%</span><span class="skill__bar"><i></i></span></li>
+                <li class="skill" style="--v: 0.85"><span class="skill__name">React</span><span class="skill__num num" data-count="85">85%</span><span class="skill__bar"><i></i></span></li>
+              </ul>
+            </div>
+
+            <div class="skillset" data-reveal style="--signal: var(--color-cyan); --i: 1">
+              <h3 data-i18n="setBack">Backend</h3>
+              <ul>
+                <li class="skill" style="--v: 1"><span class="skill__name">Node.js</span><span class="skill__num num" data-count="100">100%</span><span class="skill__bar"><i></i></span></li>
+                <li class="skill" style="--v: 1"><span class="skill__name">Express.js</span><span class="skill__num num" data-count="100">100%</span><span class="skill__bar"><i></i></span></li>
+                <li class="skill" style="--v: 0.7"><span class="skill__name">NestJS</span><span class="skill__num num" data-count="70">70%</span><span class="skill__bar"><i></i></span></li>
+                <li class="skill" style="--v: 0.6"><span class="skill__name">Python</span><span class="skill__num num" data-count="60">60%</span><span class="skill__bar"><i></i></span></li>
+                <li class="skill" style="--v: 0.5"><span class="skill__name">C++</span><span class="skill__num num" data-count="50">50%</span><span class="skill__bar"><i></i></span></li>
+                <li class="skill" style="--v: 0.3"><span class="skill__name">PHP</span><span class="skill__num num" data-count="30">30%</span><span class="skill__bar"><i></i></span></li>
+              </ul>
+            </div>
+
+            <div class="skills__side">
+              <div class="skillset" data-reveal style="--signal: var(--color-hot); --i: 2">
+                <h3 data-i18n="setDb">Ma’lumotlar bazasi</h3>
+                <ul>
+                  <li class="skill" style="--v: 0.8"><span class="skill__name">PostgreSQL</span><span class="skill__num num" data-count="80">80%</span><span class="skill__bar"><i></i></span></li>
+                  <li class="skill" style="--v: 0.7"><span class="skill__name">MongoDB</span><span class="skill__num num" data-count="70">70%</span><span class="skill__bar"><i></i></span></li>
+                </ul>
+              </div>
+
+              <div class="skillset skillset--plain" data-reveal style="--i: 3">
+                <h3 data-i18n="setServices">Ishlatadigan xizmatlarim</h3>
+                <ul class="tags">
+                  <li>GitHub</li>
+                  <li>Netlify</li>
+                  <li>Vercel</li>
+                  <li>Northflank</li>
+                  <li>Supabase</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="tongues" data-reveal>
+            <h3 data-i18n="tonguesTitle">Tillar</h3>
+            <dl>
+              <div><dt data-i18n="tongueUzK">O‘zbek</dt><dd data-i18n="tongueUzV">Ona tilim</dd></div>
+              <div><dt data-i18n="tongueEnK">Ingliz</dt><dd data-i18n="tongueEnV">IELTS 6.0 Overall, 2025</dd></div>
+              <div><dt data-i18n="tongueRuK">Rus</dt><dd data-i18n="tongueRuV">Tushunaman, gapirishim taxminan A1</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Loyihalar -->
+      <section class="section projects" id="loyihalar" style="--signal: var(--color-hot)">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <h2 data-i18n="projTitle">O‘zim asos solgan loyihalar</h2>
+          </div>
+
+          <article class="case" data-reveal style="--signal: var(--color-lime)">
+            <div class="case__art" aria-hidden="true">
+              <svg class="motif motif--bars" viewBox="0 0 320 220" preserveAspectRatio="xMidYMid meet">
+                <path class="motif__grid" d="M24 40h272M24 88h272M24 136h272M24 184h272" />
+                <rect class="motif__bar" style="--d: 0; --h: 0.42" x="40" y="24" width="30" height="160" rx="4" />
+                <rect class="motif__bar" style="--d: 1; --h: 0.58" x="86" y="24" width="30" height="160" rx="4" />
+                <rect class="motif__bar motif__bar--alt" style="--d: 2; --h: 0.3" x="132" y="24" width="30" height="160" rx="4" />
+                <rect class="motif__bar" style="--d: 3; --h: 0.7" x="178" y="24" width="30" height="160" rx="4" />
+                <rect class="motif__bar" style="--d: 4; --h: 0.84" x="224" y="24" width="30" height="160" rx="4" />
+                <rect class="motif__bar" style="--d: 5; --h: 1" x="270" y="24" width="30" height="160" rx="4" />
+                <path class="motif__line" pathLength="1" d="M55 126 101 100 147 142 193 80 239 58 285 32" />
+              </svg>
+            </div>
+            <div class="case__body">
+              <header class="case__head">
+                <h3>Moliyachi</h3>
+                <p class="role" data-i18n="p1Role">Asoschi va dasturchi</p>
+              </header>
+              <p class="case__text" data-i18n="p1Text">Ta’lim markazlari va mustaqil ustozlar uchun moliyaviy hisob-kitobni avtomatlashtiruvchi veb-platforma. O‘quvchilar to‘lovini nazorat qiladi, oylik to‘lovlarni hisoblaydi, qarzdorlarni aniqlaydi, hisobot yuritadi va ota-onalarga Telegram orqali xabar yuboradi.</p>
+              <dl class="case__meta">
+                <div>
+                  <dt data-i18n="metaGoal">Maqsad</dt>
+                  <dd data-i18n="p1Goal">Qog‘oz daftar va qo‘lda yuritiladigan Excel jadvallariga ehtiyojni kamaytirish, inson omilidan chiqadigan xatolarni qisqartirish.</dd>
+                </div>
+                <div>
+                  <dt data-i18n="metaMine">Mening vazifam</dt>
+                  <dd data-i18n="p1Mine">Yo‘nalishni belgilash, talablar tahlili, arxitektura, ma’lumotlar bazasi tuzilmasi, biznes mantiqi va sifat nazorati.</dd>
+                </div>
+                <div>
+                  <dt data-i18n="metaState">Holat</dt>
+                  <dd data-i18n="p1State">2026-yil 15-sentabrdan foydalanishga ochiq. Foydalanuvchilar hozircha ko‘p emas, faol rivojlanmoqda.</dd>
+                </div>
+              </dl>
+              <ul class="tags">
+                <li>React</li><li>Vite</li><li>TypeScript</li><li>Node.js</li><li>Express</li><li>PostgreSQL (Supabase)</li><li>Telegram bot</li><li>Webhook</li>
+              </ul>
+              <a class="btn btn--primary" href="https://moliyachi-edu.uz/" target="_blank" rel="noopener">
+                <span>moliyachi-edu.uz</span>
+                <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+              </a>
+            </div>
+          </article>
+
+          <div class="projects__pair">
+            <article class="card" data-reveal style="--signal: var(--color-cyan); --i: 0">
+              <div class="card__art" aria-hidden="true">
+                <svg class="motif motif--quiz" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet">
+                  <g class="motif__row" style="--d: 0"><circle cx="46" cy="38" r="13" /><path class="motif__tick" pathLength="1" d="m40 38 4.5 4.5L53 34" /><rect x="74" y="31" width="200" height="14" rx="7" /></g>
+                  <g class="motif__row" style="--d: 1"><circle cx="46" cy="76" r="13" /><path class="motif__tick" pathLength="1" d="m40 76 4.5 4.5L53 72" /><rect x="74" y="69" width="150" height="14" rx="7" /></g>
+                  <g class="motif__row" style="--d: 2"><circle cx="46" cy="114" r="13" /><path class="motif__tick" pathLength="1" d="m40 114 4.5 4.5L53 110" /><rect x="74" y="107" width="178" height="14" rx="7" /></g>
+                </svg>
+              </div>
+              <header class="card__head">
+                <h3>JS-talim</h3>
+                <p class="role" data-i18n="p2Role">Hammuallif</p>
+              </header>
+              <p data-i18n="p2Text">Abituriyentlar, o‘qituvchilar va talabalar uchun test tuzish, olimpiada o‘tkazish va fanlarga oid vazifalar platformasi.</p>
+              <p class="card__aside" data-i18n="p2Aside">Javohir Ikromov bilan teng huquqli hamkorlik: JS — Javohir va Sirojjon degani, JavaScript emas.</p>
+              <ul class="tags"><li>React</li><li>NestJS</li></ul>
+              <footer class="card__foot">
+                <span class="state" data-i18n="p2State">Jarayonda</span>
+                <a class="link" href="https://github.com/JavohirIkromov-80/js-talim" target="_blank" rel="noopener">
+                  <span>GitHub</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                </a>
+              </footer>
+            </article>
+
+            <article class="card" data-reveal style="--signal: var(--color-orange); --i: 1">
+              <div class="card__art" aria-hidden="true">
+                <svg class="motif motif--route" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet">
+                  <path class="motif__path" d="M60 75C120 75 120 30 190 30h70M60 75c60 0 60 45 130 45h70M60 75h200" />
+                  <rect class="motif__hub" x="34" y="53" width="44" height="44" rx="8" />
+                  <circle class="motif__shop" cx="268" cy="30" r="13" />
+                  <circle class="motif__shop" cx="268" cy="75" r="13" />
+                  <circle class="motif__shop" cx="268" cy="120" r="13" />
+                  <circle class="motif__dot" r="6"><animateMotion dur="2.6s" repeatCount="indefinite" path="M60 75C120 75 120 30 190 30h70" /></circle>
+                  <circle class="motif__dot" r="6"><animateMotion dur="2.6s" begin="-0.9s" repeatCount="indefinite" path="M60 75h200" /></circle>
+                  <circle class="motif__dot" r="6"><animateMotion dur="2.6s" begin="-1.7s" repeatCount="indefinite" path="M60 75c60 0 60 45 130 45h70" /></circle>
+                </svg>
+              </div>
+              <header class="card__head">
+                <h3>Management</h3>
+                <p class="role" data-i18n="p3Role">Asoschi</p>
+              </header>
+              <p data-i18n="p3Text">Mahsulotlarni do‘konlarga yetkazish, savdolarni hisobga olish va qarzdorlikni boshqarishni avtomatlashtiruvchi veb-platforma.</p>
+              <p class="card__aside" data-i18n="p3Aside">Qisman va ortiqcha to‘lovlar, savdo statistikasi, internetsiz ishlash va aloqa tiklanganda sinxronlash.</p>
+              <ul class="tags"><li>React</li><li>NestJS</li><li>PostgreSQL</li><li>Supabase</li></ul>
+              <footer class="card__foot">
+                <span class="state" data-i18n="p3State">Backend testdan o‘tgan, frontend davom etmoqda</span>
+                <span class="card__nolink" data-i18n="p3NoLink">Hozircha ommaviy havola yo‘q</span>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Ta’lim va sertifikatlar -->
+      <section class="section edu" id="talim" style="--signal: var(--color-cyan)">
+        <div class="container edu__grid">
+          <div>
+            <div class="section__head" data-reveal>
+              <h2 data-i18n="eduTitle">Ta’lim</h2>
+            </div>
+            <ol class="timeline" data-reveal>
+              <li>
+                <span class="timeline__when" data-i18n="edu1When">2026-mart — hozir</span>
+                <h3>Najot Ta’lim</h3>
+                <p data-i18n="edu1Text">Full-Stack guruhi.</p>
+              </li>
+              <li>
+                <span class="timeline__when" data-i18n="edu2When">2023 — 2027</span>
+                <h3 data-i18n="edu2Name">TATU</h3>
+                <p data-i18n="edu2Text">Dasturiy injiniring, 4-kurs. 2027-yilda bitiraman.</p>
+              </li>
+              <li>
+                <span class="timeline__when">2021 — 2023</span>
+                <h3 data-i18n="edu3Name">Qorako‘l akademik litseyi</h3>
+                <p data-i18n="edu3Text">Texnika (matematika-fizika) yo‘nalishi, “Texnik dasturchi” diplomi.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <div class="section__head" data-reveal>
+              <h2 data-i18n="certTitle">Sertifikatlar</h2>
+            </div>
+            <ul class="certs" data-reveal>
+              <li>
+                <a class="cert" href="https://coursera.org/verify/professional-cert/J91JGC8UFQH7" target="_blank" rel="noopener">
+                  <span class="cert__body">
+                    <span class="cert__name">Google Data Analytics</span>
+                    <span class="cert__meta" data-i18n="cert1Meta">Coursera, 8 kurs. 2025-yil 13-avgust</span>
+                  </span>
+                  <span class="cert__go"><span data-i18n="certVerify">Tekshirish</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></span>
+                </a>
+              </li>
+              <li>
+                <a class="cert" href="https://coursera.org/verify/professional-cert/SEI1UIX542Q2" target="_blank" rel="noopener">
+                  <span class="cert__body">
+                    <span class="cert__name">Google IT Support</span>
+                    <span class="cert__meta" data-i18n="cert2Meta">Coursera, 6 kurs. 2025-yil 14-avgust</span>
+                  </span>
+                  <span class="cert__go"><span data-i18n="certVerify">Tekshirish</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></span>
+                </a>
+              </li>
+              <li>
+                <div class="cert cert--static">
+                  <span class="cert__body">
+                    <span class="cert__name">IELTS</span>
+                    <span class="cert__meta" data-i18n="cert3Meta">6.0 Overall, 2025</span>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Aloqa: ikkinchi parda -->
+      <section class="contact on-curtain" id="aloqa">
+        <div class="curtain curtain--still" aria-hidden="true">
+          <div class="curtain__field">
+            <i class="blob blob--hot"></i>
+            <i class="blob blob--cyan"></i>
+            <i class="blob blob--lime"></i>
+            <i class="blob blob--orange"></i>
+          </div>
+          <div class="curtain__pleats"></div>
+        </div>
+
+        <div class="container contact__grid">
+          <div class="contact__lead" data-reveal>
+            <h2 data-i18n="contactTitle">Loyihangiz bormi? Yozing.</h2>
+            <p class="lead" data-i18n="contactText">Eng tez javobni Telegramda beraman.</p>
+
+            <ul class="channels">
+              <li>
+                <a class="channel" href="https://t.me/ToshmurodovSirojjon" target="_blank" rel="noopener" aria-label="Telegram">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3.5 2.8 10.7c-.9.35-.86 1.62.06 1.9l4.7 1.45 1.8 5.6c.25.78 1.25.98 1.78.36l2.6-3.05 4.6 3.4c.6.44 1.45.1 1.6-.63L22.9 4.6c.15-.75-.6-1.37-1.4-1.1ZM9.4 13.6l8.5-6.2-6.6 7.5-.3 3.2-1.6-4.5Z" /></svg>
+                  <span class="channel__tip">Telegram</span>
+                </a>
+              </li>
+              <li>
+                <a class="channel" href="#xabar" data-focus-form aria-label="Email" data-i18n-attr="aria-label:chEmailLabel">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v.3l-9 5.4-9-5.4v-.3Zm0 2.63V17.5A2.5 2.5 0 0 0 5.5 20h13a2.5 2.5 0 0 0 2.5-2.5V9.13l-8.49 5.1a1 1 0 0 1-1.02 0L3 9.13Z" /></svg>
+                  <span class="channel__tip" data-i18n="chEmailTip">Xabar yozish</span>
+                </a>
+              </li>
+              <li>
+                <a class="channel" href="https://github.com/sirojjontoshmurodov7-bit" target="_blank" rel="noopener" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
+                  <span class="channel__tip">GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a class="channel" href="https://www.linkedin.com/in/sirojjon-toshmurodov-4798a840a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68Z" /></svg>
+                  <span class="channel__tip">LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a class="channel" href="tel:+998902881292" aria-label="Telefon" data-i18n-attr="aria-label:chPhoneLabel">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 2.9c.5-.5 1.3-.6 1.9-.1l2.6 2.1c.6.5.8 1.3.4 2L10.3 9c-.2.4-.2.9.1 1.3a14 14 0 0 0 3.3 3.3c.4.3.9.3 1.3.1l2.1-1.2c.7-.4 1.5-.2 2 .4l2.1 2.6c.5.6.4 1.4-.1 1.9l-1.3 1.3c-1.2 1.2-3 1.6-4.6 1A19.5 19.5 0 0 1 4.3 8.8c-.6-1.6-.2-3.4 1-4.6l1.3-1.3Z" /></svg>
+                  <span class="channel__tip" data-i18n="chPhoneTip">Qo‘ng‘iroq</span>
+                </a>
+              </li>
+            </ul>
+
+            <dl class="direct">
+              <div>
+                <dt data-i18n="directPhone">Telefon</dt>
+                <dd><a href="tel:+998902881292" class="num">+998 90 288 12 92</a></dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd>
+                  <button class="copy" type="button" data-copy="sirojjontoshmurodov7@gmail.com">
+                    <span class="copy__text">sirojjontoshmurodov7@gmail.com</span>
+                    <span class="copy__state" data-i18n="copyIdle">Nusxalash</span>
+                  </button>
+                </dd>
+              </div>
+            </dl>
+
+            <a class="btn btn--secondary" href="/cv-sirojjon-toshmurodov.pdf" download>
+              <svg class="btn__icon btn__icon--down" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14" /></svg>
+              <span data-i18n="cvDownload">Rezyumeni yuklab olish (PDF)</span>
+            </a>
+          </div>
+
+          <form class="form on-stage" id="xabar" action="https://t.me/ToshmurodovSirojjon" method="get" target="_blank" novalidate data-reveal>
+            <h3 data-i18n="formTitle">Xabar yozish</h3>
+            <div class="field">
+              <label for="f-name" data-i18n="formName">Ismingiz</label>
+              <input id="f-name" type="text" autocomplete="name" required maxlength="80" aria-describedby="f-name-err" />
+              <p class="field__err" id="f-name-err" role="alert" hidden data-i18n="formNameErr">Ismingizni yozing.</p>
+            </div>
+            <div class="field">
+              <label for="f-text" data-i18n="formText">Xabaringiz</label>
+              <textarea id="f-text" name="text" rows="5" required maxlength="1500" aria-describedby="f-text-err"></textarea>
+              <p class="field__err" id="f-text-err" role="alert" hidden data-i18n="formTextErr">Xabar matnini yozing.</p>
+            </div>
+            <button class="btn btn--primary" type="submit">
+              <span data-i18n="formSend">Yuborish</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </button>
+            <p class="form__hint" data-i18n="formHint">“Yuborish” bosilganda Telegram ochiladi va xabar matni tayyor turadi.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="colophon">
+      <div class="container colophon__inner">
+        <p class="colophon__mark">Sirojjon Toshmurodov</p>
+        <p class="colophon__line" data-i18n="footLine">Fullstack web developer va software engineer.</p>
+        <nav class="colophon__nav" aria-label="Pastki havolalar" data-i18n-attr="aria-label:footNavLabel">
+          <a href="#men" data-i18n="navAbout">Men haqimda</a>
+          <a href="#konikmalar" data-i18n="navSkills">Ko‘nikmalar</a>
+          <a href="#loyihalar" data-i18n="navProjects">Loyihalar</a>
+          <a href="#talim" data-i18n="navEdu">Ta’lim</a>
+          <a href="#aloqa" data-i18n="navContact">Aloqa</a>
+        </nav>
+        <p class="colophon__copy">© 2026 Sirojjon Toshmurodov</p>
+        <a class="colophon__top" href="#top" data-i18n="footTop">Yuqoriga</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

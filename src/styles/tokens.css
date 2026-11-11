@@ -1,0 +1,99 @@
+/* Barcha rang, shrift va o'lchamlar shu yerda e'lon qilinadi. Boshqa fayllarda faqat var(--…) ishlatiladi. */
+:root {
+  color-scheme: dark;
+
+  /* masofa va matn shkalasi */
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem;
+  --text-display: clamp(2.05rem, 4.4vw + 0.7rem, 4.6rem);
+  --text-section: clamp(1.6rem, 2vw + 0.95rem, 2.75rem);
+  --text-title: clamp(1.05rem, 0.45vw + 0.95rem, 1.3rem);
+  --text-lead: clamp(1.0625rem, 0.4vw + 0.98rem, 1.3rem);
+
+  /* harakat */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms; --dur-reveal: 700ms;
+
+  /* tuzilma */
+  --container: 1240px; --gutter: 48px; --gap-columns: 32px;
+  --section-gap-s: 96px; --section-gap: 128px; --section-gap-l: 160px;
+  --rail-h: 64px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+
+  /* parda ranglari: sahnadagi yorqin palitra */
+  --color-hot: oklch(70% 0.23 8);
+  --color-orange: oklch(77% 0.18 52);
+  --color-sun: oklch(90% 0.17 97);
+  --color-lime: oklch(89% 0.2 128);
+  --color-cyan: oklch(85% 0.13 200);
+  --color-curtain: oklch(89% 0.165 97);
+  --color-curtain-ink: oklch(14% 0.02 285);
+  --color-curtain-ink-2: oklch(27% 0.03 285);
+  --pleat-shade: oklch(20% 0.05 40 / 0.1);
+  --pleat-light: oklch(100% 0 0 / 0.16);
+
+  /* qorong'i sahna */
+  --color-stage: oklch(11% 0.012 285);
+  --color-stage-2: oklch(15.5% 0.016 285);
+  --color-stage-3: oklch(20.5% 0.02 285);
+  --color-stage-ink: oklch(96% 0.008 95);
+  --color-stage-ink-2: oklch(86% 0.012 95);
+  --color-stage-muted: oklch(72% 0.016 285);
+  --color-stage-rule: oklch(25% 0.02 285);
+  --color-stage-rule-2: oklch(38% 0.022 285);
+  --color-shadow: oklch(4% 0.02 285 / 0.75);
+
+  --color-error: oklch(74% 0.17 25); --color-success: oklch(80% 0.16 150);
+
+  /* xakker figurasi */
+  --actor-hood: oklch(29% 0.04 285);
+  --actor-hood-front: oklch(33% 0.045 285);
+  --actor-hood-dark: oklch(20% 0.035 285);
+  --actor-hood-light: oklch(46% 0.05 285);
+  --actor-pants: oklch(23% 0.02 255);
+  --actor-pants-dark: oklch(16.5% 0.02 255);
+  --actor-skin: oklch(74% 0.07 62);
+  --actor-skin-dark: oklch(58% 0.07 58);
+  --actor-shoe: oklch(94% 0.01 95);
+  --actor-shoe-dark: oklch(74% 0.015 285);
+  --actor-void: oklch(7% 0.01 285);
+  --prop-case: oklch(18% 0.02 285);
+  --prop-case-edge: oklch(42% 0.025 285);
+  --prop-metal: oklch(66% 0.012 285);
+  --prop-laptop: oklch(80% 0.01 285);
+  --prop-laptop-dark: oklch(52% 0.012 285);
+
+  /* shriftlar */
+  --font-display: "Unbounded", "Arial Black", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Onest", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-outlier: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --display-weight: 600; --tracking-display: -0.025em;
+
+  --radius-card: 18px; --radius-field: 12px; --radius-pill: 999px; --rule-hair: 1px;
+  --shadow-card: 0 28px 48px -28px var(--color-shadow);
+}
+
+/* Qorong'i sahna: asosiy holat. Parda ustidagi qorong'i panel ham shu blokni qayta oladi. */
+:root,
+.on-stage {
+  --color-paper: var(--color-stage); --color-paper-2: var(--color-stage-2); --color-paper-3: var(--color-stage-3);
+  --color-ink: var(--color-stage-ink); --color-ink-2: var(--color-stage-ink-2); --color-muted: var(--color-stage-muted);
+  --color-rule: var(--color-stage-rule); --color-rule-2: var(--color-stage-rule-2);
+  --color-accent: var(--color-lime); --color-accent-ink: var(--color-curtain-ink); --color-focus: var(--color-lime);
+  --btn-bg: var(--color-lime); --btn-bg-hover: var(--color-sun); --btn-fg: var(--color-curtain-ink);
+  --btn-inv-bg: var(--color-stage-ink); --btn-inv-fg: var(--color-stage);
+}
+
+/* Yorqin parda ustidagi holat: siyoh qoraga, tugma qora plashkaga aylanadi. */
+.on-curtain {
+  --color-paper: var(--color-curtain); --color-paper-2: var(--color-sun); --color-paper-3: var(--color-sun);
+  --color-ink: var(--color-curtain-ink); --color-ink-2: var(--color-curtain-ink-2); --color-muted: var(--color-curtain-ink-2);
+  --color-rule: var(--color-curtain-ink); --color-rule-2: var(--color-curtain-ink);
+  --color-accent: var(--color-curtain-ink); --color-accent-ink: var(--color-stage-ink); --color-focus: var(--color-curtain-ink);
+  --btn-bg: var(--color-curtain-ink); --btn-bg-hover: var(--color-stage-3); --btn-fg: var(--color-stage-ink);
+  --btn-inv-bg: var(--color-curtain-ink); --btn-inv-fg: var(--color-stage-ink);
+}
+
+@media (max-width: 60rem) { :root { --gutter: 24px; --section-gap-s: 72px; --section-gap: 96px; --section-gap-l: 112px; } }
+@media (max-width: 40rem) { :root { --gutter: 18px; --section-gap-s: 56px; --section-gap: 76px; --section-gap-l: 92px; --gap-columns: 16px; --rail-h: 58px; } }
