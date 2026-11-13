@@ -79,13 +79,28 @@ async function setLang(next: Lang, save = true) {
   attrNodes.forEach(({ el, attr, key }) => el.setAttribute(attr, t(key)))
   document.title = t('metaTitle')
   metaDesc.content = t('metaDesc')
-  $$<HTMLButtonElement>('.lang button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === next)))
+  $$<HTMLButtonElement>('.lang__list button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.lang === next)))
+  langCode.textContent = next.toUpperCase()
+  langFlag.setAttribute('href', `#flag-${next}`)
   if (save) { try { localStorage.setItem('lang', next) } catch { /* xotira yopiq bo'lishi mumkin */ } }
 }
 
-$$<HTMLButtonElement>('.lang button').forEach((b) => {
-  b.addEventListener('click', () => { if (b.dataset.lang !== lang) void setLang(b.dataset.lang as Lang) })
+const langBox = $<HTMLElement>('#lang')
+const langBtn = $<HTMLButtonElement>('.lang__btn')
+const langList = $<HTMLElement>('.lang__list')
+const langCode = $<HTMLElement>('.lang__code')
+const langFlag = $<SVGUseElement>('.lang__btn use')
+const setLangMenu = (open: boolean) => { langList.hidden = !open; langBtn.setAttribute('aria-expanded', String(open)) }
+langBtn.addEventListener('click', () => setLangMenu(langBtn.getAttribute('aria-expanded') !== 'true'))
+$$<HTMLButtonElement>('.lang__list button').forEach((b) => {
+  b.addEventListener('click', () => {
+    setLangMenu(false)
+    langBtn.focus()
+    if (b.dataset.lang !== lang) void setLang(b.dataset.lang as Lang)
+  })
 })
+document.addEventListener('click', (e) => { if (!langBox.contains(e.target as Node)) setLangMenu(false) })
+addEventListener('keydown', (e) => { if (e.key === 'Escape' && !langList.hidden) { setLangMenu(false); langBtn.focus() } })
 
 /* ---------- sahna va kirish ---------- */
 const hero = $<HTMLElement>('.hero')

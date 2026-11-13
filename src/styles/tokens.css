@@ -1,3 +1,6 @@
+/* Unbounded'dagi "j" harfining dumi deyarli yo'q: "Sirojjon" ichida "i" bo'lib ko'rinadi. Faqat shu harf Onest'dan olinadi. */
+@font-face { font-family: "Display J"; src: url("/fonts/onest-600-latin.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+006A; size-adjust: 118%; }
+
 /* Barcha rang, shrift va o'lchamlar shu yerda e'lon qilinadi. Boshqa fayllarda faqat var(--…) ishlatiladi. */
 :root {
   color-scheme: dark;
@@ -65,7 +68,7 @@
   --prop-laptop-dark: oklch(52% 0.012 285);
 
   /* shriftlar */
-  --font-display: "Unbounded", "Arial Black", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Display J", "Unbounded", "Arial Black", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Onest", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-outlier: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
   --display-weight: 600; --tracking-display: -0.025em;

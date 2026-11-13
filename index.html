@@ -103,6 +103,33 @@
     </script>
   </head>
   <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="flag-uz" viewBox="0 0 28 20">
+          <rect width="28" height="20" fill="#fff" />
+          <rect width="28" height="6.4" fill="#1eb4e8" />
+          <rect y="13.6" width="28" height="6.4" fill="#1eb53a" />
+          <rect y="6.1" width="28" height="0.9" fill="#ce1126" />
+          <rect y="13" width="28" height="0.9" fill="#ce1126" />
+          <circle cx="5" cy="3.2" r="2.3" fill="#fff" />
+          <circle cx="5.9" cy="3.2" r="1.95" fill="#1eb4e8" />
+          <g fill="#fff"><circle cx="9.4" cy="1.8" r=".5" /><circle cx="11.4" cy="1.8" r=".5" /><circle cx="13.4" cy="1.8" r=".5" /><circle cx="10.4" cy="3.7" r=".5" /><circle cx="12.4" cy="3.7" r=".5" /></g>
+        </symbol>
+        <symbol id="flag-ru" viewBox="0 0 28 20">
+          <rect width="28" height="20" fill="#fff" />
+          <rect y="6.67" width="28" height="6.67" fill="#1c4fa8" />
+          <rect y="13.33" width="28" height="6.67" fill="#d52b1e" />
+        </symbol>
+        <symbol id="flag-en" viewBox="0 0 28 20">
+          <rect width="28" height="20" fill="#1f3a8a" />
+          <path d="M0 0 28 20M28 0 0 20" stroke="#fff" stroke-width="3.6" />
+          <path d="M0 0 28 20M28 0 0 20" stroke="#d52b3a" stroke-width="1.2" />
+          <path d="M14 0v20M0 10h28" stroke="#fff" stroke-width="6" />
+          <path d="M14 0v20M0 10h28" stroke="#d52b3a" stroke-width="3.4" />
+        </symbol>
+      </defs>
+    </svg>
+
     <a class="skip-link" href="#men" data-i18n="skipLink">Asosiy matnga o‘tish</a>
 
     <header class="rail" id="rail">
@@ -116,10 +143,35 @@
           <a href="#aloqa" data-i18n="navContact">Aloqa</a>
         </nav>
         <div class="rail__tools">
-          <div class="lang" role="group" aria-label="Til" data-i18n-attr="aria-label:langLabel">
-            <button type="button" data-lang="uz" aria-pressed="true">O‘z</button>
-            <button type="button" data-lang="ru" aria-pressed="false">Рус</button>
-            <button type="button" data-lang="en" aria-pressed="false">Eng</button>
+          <div class="lang" id="lang">
+            <button class="lang__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-list" aria-label="Til" data-i18n-attr="aria-label:langLabel">
+              <svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><use href="#flag-uz" /></svg>
+              <span class="lang__code">UZ</span>
+              <svg class="lang__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </button>
+            <ul class="lang__list" id="lang-list" role="listbox" aria-label="Til" data-i18n-attr="aria-label:langLabel" hidden>
+              <li role="presentation">
+                <button type="button" role="option" data-lang="uz" aria-selected="true">
+                  <svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><use href="#flag-uz" /></svg>
+                  <span>O‘zbekcha</span>
+                  <svg class="lang__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" /></svg>
+                </button>
+              </li>
+              <li role="presentation">
+                <button type="button" role="option" data-lang="ru" aria-selected="false">
+                  <svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><use href="#flag-ru" /></svg>
+                  <span>Русский</span>
+                  <svg class="lang__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" /></svg>
+                </button>
+              </li>
+              <li role="presentation">
+                <button type="button" role="option" data-lang="en" aria-selected="false">
+                  <svg class="flag" viewBox="0 0 28 20" aria-hidden="true"><use href="#flag-en" /></svg>
+                  <span>English</span>
+                  <svg class="lang__check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" /></svg>
+                </button>
+              </li>
+            </ul>
           </div>
           <button class="rail__menu" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menyu" data-i18n-attr="aria-label:menuLabel">
             <span></span><span></span>
@@ -382,6 +434,113 @@
               <footer class="card__foot">
                 <span class="state" data-i18n="p3State">Backend testdan o‘tgan, frontend davom etmoqda</span>
                 <span class="card__nolink" data-i18n="p3NoLink">Hozircha ommaviy havola yo‘q</span>
+              </footer>
+            </article>
+          </div>
+
+          <div class="section__head section__head--sub" data-reveal>
+            <h2 data-i18n="otherTitle">Boshqa loyihalar</h2>
+            <p class="section__note" data-i18n="otherNote">Avvalgi, nisbatan oddiyroq ishlarim.</p>
+          </div>
+          <div class="projects__grid">
+            <article class="card card--work card--wide" data-reveal style="--signal: var(--color-hot); --i: 0">
+              <header class="card__head">
+                <h3>Uy-bozor</h3>
+                <p class="role" data-i18n="o1Kind">Ko‘chmas mulk marketplace</p>
+              </header>
+              <p data-i18n="o1Text">Sotuv va ijara e’lonlari platformasi. Foydalanuvchilar e’lonlarni ko‘radi, qidiradi va filterlaydi, sevimlilarga saqlaydi va sotuvchiga murojaat yuboradi. Sotuvchi o‘z e’lonlarini va ularga kelgan murojaatlarni boshqaradi, admin yangi e’lonlarni moderatsiya qiladi (kutilmoqda → tasdiqlangan / rad etilgan).</p>
+              <p class="card__aside" data-i18n="o1Aside">NestJS + PostgreSQL + Prisma backend va unga haqiqiy API orqali ulangan React frontend. Mock ma’lumotlarsiz.</p>
+              <ul class="tags"><li>React</li><li>NestJS</li><li>PostgreSQL</li><li>Prisma</li></ul>
+              <footer class="card__foot">
+                <a class="link" href="https://frontend-eta-smoky-54.vercel.app" target="_blank" rel="noopener">
+                  <span>frontend-eta-smoky-54.vercel.app</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                </a>
+              </footer>
+            </article>
+            <article class="card card--work" data-reveal style="--signal: var(--color-lime); --i: 1">
+              <header class="card__head">
+                <h3>Mening Hamyonim</h3>
+                <p class="role" data-i18n="o2Kind">Shaxsiy xarajatlar hisobi</p>
+              </header>
+              <p data-i18n="o2Text">Xarajatlarni kategoriya bo‘yicha yuritish, oylik limit o‘rnatish va kategoriyalar analitikasini ko‘rish. Foydasiz yoki impulsiv xarajatlarni alohida belgilash mumkin.</p>
+              <ul class="tags"><li>Budget</li><li>Analytics</li><li>Limits</li></ul>
+              <footer class="card__foot">
+                <a class="link" href="https://pullarim.netlify.app/" target="_blank" rel="noopener">
+                  <span>pullarim.netlify.app</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                </a>
+              </footer>
+            </article>
+            <article class="card card--work" data-reveal style="--signal: var(--color-cyan); --i: 0">
+              <header class="card__head">
+                <h3>MORBIDO</h3>
+                <p class="role" data-i18n="o3Kind">Brend va mahsulot sayti</p>
+              </header>
+              <p data-i18n="o3Text">Premium hojatxona qog‘ozi ishlab chiqaruvchi MORBIDO (777BDS Industries) uchun sayt: mahsulotlar kolleksiyasi, qadoq xususiyatlari, chakana va optom narxlar.</p>
+              <ul class="tags"><li>Landing</li><li>Catalog</li></ul>
+              <footer class="card__foot">
+                <a class="link" href="https://morbidopremium.uz" target="_blank" rel="noopener">
+                  <span>morbidopremium.uz</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                </a>
+              </footer>
+            </article>
+            <article class="card card--work" data-reveal style="--signal: var(--color-orange); --i: 1">
+              <header class="card__head">
+                <h3>TST Cafe</h3>
+                <p class="role" data-i18n="o4Kind">Restoran boshqaruv paneli</p>
+              </header>
+              <p data-i18n="o4Text">Kafe menyusini boshqarish paneli: taomlar, kategoriyalar, mavjud va mavjud bo‘lmagan pozitsiyalar statistikasi.</p>
+              <ul class="tags"><li>Dashboard</li><li>CRUD</li></ul>
+              <footer class="card__foot">
+                <a class="link" href="https://restaurant-frontend-delta-five.vercel.app/" target="_blank" rel="noopener">
+                  <span>restaurant-frontend-delta-five.vercel.app</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                </a>
+              </footer>
+            </article>
+            <article class="card card--work" data-reveal style="--signal: var(--color-sun); --i: 0">
+              <header class="card__head">
+                <h3>Haftalik rejam</h3>
+                <p class="role" data-i18n="o5Kind">Haftalik rejalashtiruvchi</p>
+              </header>
+              <p data-i18n="o5Text">Hafta kunlari bo‘yicha vazifalar: ish, shaxsiy, o‘qish va salomatlik kategoriyalari, haftalik bajarilish progressi.</p>
+              <ul class="tags"><li>Planner</li><li>Progress</li></ul>
+              <footer class="card__foot">
+                <a class="link" href="https://haftalik-rejam.netlify.app" target="_blank" rel="noopener">
+                  <span>haftalik-rejam.netlify.app</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                </a>
+              </footer>
+            </article>
+            <article class="card card--work" data-reveal style="--signal: var(--color-hot); --i: 1">
+              <header class="card__head">
+                <h3>Ultimate Quiz</h3>
+                <p class="role" data-i18n="o6Kind">Test platformasi</p>
+              </header>
+              <p data-i18n="o6Text">Universitet fanlari bo‘yicha test: Software Architecture, Mobile App Development, Software Quality Assurance. Savollar va javoblar har safar aralashtiriladi.</p>
+              <ul class="tags"><li>Quiz</li><li>Shuffle</li></ul>
+              <footer class="card__foot">
+                <a class="link" href="https://sessionquizzes.netlify.app" target="_blank" rel="noopener">
+                  <span>sessionquizzes.netlify.app</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                </a>
+              </footer>
+            </article>
+            <article class="card card--work" data-reveal style="--signal: var(--color-cyan); --i: 0">
+              <header class="card__head">
+                <h3>PulMateBot</h3>
+                <p class="role" data-i18n="o7Kind">Shaxsiy moliya boti</p>
+              </header>
+              <p data-i18n="o7Text">Telegram bot, web ilova va API shaxsiy moliyani yuritish uchun: ko‘p kartali hisob, xarajat va daromad, kategoriyalar, byudjet, maqsadlar va oylik hisobot. Bot kategoriyani tugmalar bilan so‘raydi, qarz qaytarish sanasida eslatma yuboradi, forward qilingan HUMO xabarlarini avtomatik taniydi.</p>
+              <p class="card__aside" data-i18n="o7Aside">Web ilova Telegram Mini App sifatida ochiladi. Faqat so‘m (UZS), faqat ruxsat etilgan Telegram ID’lar uchun.</p>
+              <ul class="tags"><li>NestJS</li><li>grammY</li><li>React</li><li>PostgreSQL</li></ul>
+              <footer class="card__foot">
+                <a class="link" href="https://t.me/PulMateBot" target="_blank" rel="noopener">
+                  <span>@PulMateBot</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+                </a>
               </footer>
             </article>
           </div>
